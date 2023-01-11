@@ -8,13 +8,14 @@ module.exports = {
   plugins: [
     `gatsby-plugin-image`,
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: "gatsby-source-filesystem",
       options: {
-        name: `images`,
-        path: `${__dirname}/src/images`,
-      },
+        name: `blog`,
+        path: `${__dirname}/blog`
+      }
     },
     `gatsby-transformer-sharp`,
+    `gatsby-plugin-mdx`,
     `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-manifest`,
